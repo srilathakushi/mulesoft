@@ -1,0 +1,14 @@
+#%RAML 1.0
+title: emoloyee details api
+version: v2
+description: "we get company employee details"
+protocols: [http,https]
+mediaType: 
+- application/json
+traits:
+  code : !include traits/trait.raml
+  use : !include /exchange_modules/2ba4555e-f9de-4531-b75c-6990232fc0fb/new-design1/1.0.0/new-design1.raml
+securitySchemes:
+  sec : !include /security/securityScheme1.raml
+securedBy:
+  - sec
